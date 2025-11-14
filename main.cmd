@@ -1,7 +1,6 @@
 @echo off
 title LP-2 File Downloader
 
-
 :menu
 cls
 echo ========================================
@@ -60,9 +59,10 @@ echo [8/8] Downloading events.css...
 curl -L -o "PR-1(Static pages)\events.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/events.css" && echo [SUCCESS] events.css downloaded!
 echo.
 echo ========================================
-echo PR-1 Downloaded Successfully! (8 files)
+echo PR-1 Downloaded Successfully!
 echo ========================================
-goto done
+pause
+goto menu
 
 :pr2
 echo.
@@ -77,9 +77,10 @@ echo [2/2] Downloading events.css...
 curl -L -o "PR-2(Bootstrap)\events.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-2(Bootstrap)/events.css" && echo [SUCCESS] events.css downloaded!
 echo.
 echo ========================================
-echo PR-2 Downloaded Successfully! (2 files)
+echo PR-2 Downloaded Successfully!
 echo ========================================
-goto done
+pause
+goto menu
 
 :pr3
 echo.
@@ -88,17 +89,18 @@ echo Downloading PR-3 - Validation...
 echo ========================================
 if not exist "PR-3(Validation)" mkdir "PR-3(Validation)"
 echo.
-echo [1/3] Downloading event.html...
-curl -L -o "PR-3(Validation)\event.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/event.html" && echo [SUCCESS] event.html downloaded!
-echo [2/3] Downloading script.js...
-curl -L -o "PR-3(Validation)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/script.js" && echo [SUCCESS] script.js downloaded!
-echo [3/3] Downloading style.css...
+echo [1/3] Downloading index.html...
+curl -L -o "PR-3(Validation)\index.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/index.html" && echo [SUCCESS] index.html downloaded!
+echo [2/3] Downloading style.css...
 curl -L -o "PR-3(Validation)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/style.css" && echo [SUCCESS] style.css downloaded!
+echo [3/3] Downloading script.js...
+curl -L -o "PR-3(Validation)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/script.js" && echo [SUCCESS] script.js downloaded!
 echo.
 echo ========================================
-echo PR-3 Downloaded Successfully! (3 files)
+echo PR-3 Downloaded Successfully!
 echo ========================================
-goto done
+pause
+goto menu
 
 :pr4
 echo.
@@ -107,17 +109,18 @@ echo Downloading PR-4 - Filter...
 echo ========================================
 if not exist "PR-4(Filter)" mkdir "PR-4(Filter)"
 echo.
-echo [1/3] Downloading index.html...
-curl -L -o "PR-4(Filter)\index.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4(Filter)/index.html" && echo [SUCCESS] index.html downloaded!
-echo [2/3] Downloading script.js...
-curl -L -o "PR-4(Filter)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4(Filter)/script.js" && echo [SUCCESS] script.js downloaded!
-echo [3/3] Downloading style.css...
+echo [1/3] Downloading event.html...
+curl -L -o "PR-4(Filter)\event.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4(Filter)/event.html" && echo [SUCCESS] event.html downloaded!
+echo [2/3] Downloading style.css...
 curl -L -o "PR-4(Filter)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4(Filter)/style.css" && echo [SUCCESS] style.css downloaded!
+echo [3/3] Downloading script.js...
+curl -L -o "PR-4(Filter)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4(Filter)/script.js" && echo [SUCCESS] script.js downloaded!
 echo.
 echo ========================================
-echo PR-4 Downloaded Successfully! (3 files)
+echo PR-4 Downloaded Successfully!
 echo ========================================
-goto done
+pause
+goto menu
 
 :pr5
 echo.
@@ -126,17 +129,20 @@ echo Downloading PR-5 - Database...
 echo ========================================
 if not exist "PR-5(Database)" mkdir "PR-5(Database)"
 echo.
-echo [1/3] Downloading index.html...
+echo [1/4] Downloading index.html...
 curl -L -o "PR-5(Database)\index.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5(Database)/index.html" && echo [SUCCESS] index.html downloaded!
-echo [2/3] Downloading script.js...
-curl -L -o "PR-5(Database)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5(Database)/script.js" && echo [SUCCESS] script.js downloaded!
-echo [3/3] Downloading style.css...
+echo [2/4] Downloading style.css...
 curl -L -o "PR-5(Database)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5(Database)/style.css" && echo [SUCCESS] style.css downloaded!
+echo [3/4] Downloading script.js...
+curl -L -o "PR-5(Database)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5(Database)/script.js" && echo [SUCCESS] script.js downloaded!
+echo [4/4] Downloading server.js...
+curl -L -o "PR-5(Database)\server.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5(Database)/server.js" && echo [SUCCESS] server.js downloaded!
 echo.
 echo ========================================
-echo PR-5 Downloaded Successfully! (3 files)
+echo PR-5 Downloaded Successfully!
 echo ========================================
-goto done
+pause
+goto menu
 
 :pr6
 echo.
@@ -145,17 +151,20 @@ echo Downloading PR-6 - CRUD...
 echo ========================================
 if not exist "PR-6(CRUD)" mkdir "PR-6(CRUD)"
 echo.
-echo [1/3] Downloading index.html...
-curl -L -o "PR-6(CRUD)\index.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/index.html" && echo [SUCCESS] index.html downloaded!
-echo [2/3] Downloading script.js...
-curl -L -o "PR-6(CRUD)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/script.js" && echo [SUCCESS] script.js downloaded!
-echo [3/3] Downloading style.css...
-curl -L -o "PR-6(CRUD)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/style.css" && echo [SUCCESS] style.css downloaded!
+echo [1/4] Downloading login.html...
+curl -L -o "PR-6(CRUD)\login.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/login.html" && echo [SUCCESS] login.html downloaded!
+echo [2/4] Downloading dashboard.html...
+curl -L -o "PR-6(CRUD)\dashboard.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/dashboard.html" && echo [SUCCESS] dashboard.html downloaded!
+echo [3/4] Downloading admin.css...
+curl -L -o "PR-6(CRUD)\admin.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/admin.css" && echo [SUCCESS] admin.css downloaded!
+echo [4/4] Downloading admin.js...
+curl -L -o "PR-6(CRUD)\admin.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/admin.js" && echo [SUCCESS] admin.js downloaded!
 echo.
 echo ========================================
-echo PR-6 Downloaded Successfully! (3 files)
+echo PR-6 Downloaded Successfully!
 echo ========================================
-goto done
+pause
+goto menu
 
 :pr7
 echo.
@@ -166,113 +175,44 @@ if not exist "PR-7(Participant List)" mkdir "PR-7(Participant List)"
 echo.
 echo [1/3] Downloading index.html...
 curl -L -o "PR-7(Participant List)\index.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7(Participant%%20List)/index.html" && echo [SUCCESS] index.html downloaded!
-echo [2/3] Downloading script.js...
-curl -L -o "PR-7(Participant List)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7(Participant%%20List)/script.js" && echo [SUCCESS] script.js downloaded!
-echo [3/3] Downloading style.css...
+echo [2/3] Downloading style.css...
 curl -L -o "PR-7(Participant List)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7(Participant%%20List)/style.css" && echo [SUCCESS] style.css downloaded!
+echo [3/3] Downloading script.js...
+curl -L -o "PR-7(Participant List)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7(Participant%%20List)/script.js" && echo [SUCCESS] script.js downloaded!
 echo.
 echo ========================================
-echo PR-7 Downloaded Successfully! (3 files)
+echo PR-7 Downloaded Successfully!
 echo ========================================
-goto done
+pause
+goto menu
 
 :download_all
 echo.
 echo ========================================
-echo Downloading ALL Assignment Files...
+echo Downloading ALL Assignments...
 echo ========================================
-echo.
-
-REM Create directories
-if not exist "PR-1(Static pages)" mkdir "PR-1(Static pages)"
-if not exist "PR-2(Bootstrap)" mkdir "PR-2(Bootstrap)"
-if not exist "PR-3(Validation)" mkdir "PR-3(Validation)"
-if not exist "PR-4(Filter)" mkdir "PR-4(Filter)"
-if not exist "PR-5(Database)" mkdir "PR-5(Database)"
-if not exist "PR-6(CRUD)" mkdir "PR-6(CRUD)"
-if not exist "PR-7(Participant List)" mkdir "PR-7(Participant List)"
-
-echo ----------------------------------------
-echo Downloading PR-1 - Static Pages (8 files)...
-echo ----------------------------------------
-curl -L -o "PR-1(Static pages)\home.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/home.html" && echo [SUCCESS] home.html
-curl -L -o "PR-1(Static pages)\home.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/home.css" && echo [SUCCESS] home.css
-curl -L -o "PR-1(Static pages)\about.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/about.html" && echo [SUCCESS] about.html
-curl -L -o "PR-1(Static pages)\about.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/about.css" && echo [SUCCESS] about.css
-curl -L -o "PR-1(Static pages)\contact.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/contact.html" && echo [SUCCESS] contact.html
-curl -L -o "PR-1(Static pages)\contact.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/contact.css" && echo [SUCCESS] contact.css
-curl -L -o "PR-1(Static pages)\events.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/events.html" && echo [SUCCESS] events.html
-curl -L -o "PR-1(Static pages)\events.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/events.css" && echo [SUCCESS] events.css
-
-echo.
-echo ----------------------------------------
-echo Downloading PR-2 - Bootstrap (2 files)...
-echo ----------------------------------------
-curl -L -o "PR-2(Bootstrap)\events.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-2(Bootstrap)/events.html" && echo [SUCCESS] events.html
-curl -L -o "PR-2(Bootstrap)\events.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-2(Bootstrap)/events.css" && echo [SUCCESS] events.css
-
-echo.
-echo ----------------------------------------
-echo Downloading PR-3 - Validation (3 files)...
-echo ----------------------------------------
-curl -L -o "PR-3(Validation)\event.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/event.html" && echo [SUCCESS] event.html
-curl -L -o "PR-3(Validation)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/script.js" && echo [SUCCESS] script.js
-curl -L -o "PR-3(Validation)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/style.css" && echo [SUCCESS] style.css
-
-echo.
-echo ----------------------------------------
-echo Downloading PR-4 - Filter (3 files)...
-echo ----------------------------------------
-curl -L -o "PR-4(Filter)\index.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4(Filter)/index.html" && echo [SUCCESS] index.html
-curl -L -o "PR-4(Filter)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4(Filter)/script.js" && echo [SUCCESS] script.js
-curl -L -o "PR-4(Filter)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4(Filter)/style.css" && echo [SUCCESS] style.css
-
-echo.
-echo ----------------------------------------
-echo Downloading PR-5 - Database (3 files)...
-echo ----------------------------------------
-curl -L -o "PR-5(Database)\index.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5(Database)/index.html" && echo [SUCCESS] index.html
-curl -L -o "PR-5(Database)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5(Database)/script.js" && echo [SUCCESS] script.js
-curl -L -o "PR-5(Database)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5(Database)/style.css" && echo [SUCCESS] style.css
-
-echo.
-echo ----------------------------------------
-echo Downloading PR-6 - CRUD (3 files)...
-echo ----------------------------------------
-curl -L -o "PR-6(CRUD)\index.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/index.html" && echo [SUCCESS] index.html
-curl -L -o "PR-6(CRUD)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/script.js" && echo [SUCCESS] script.js
-curl -L -o "PR-6(CRUD)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/style.css" && echo [SUCCESS] style.css
-
-echo.
-echo ----------------------------------------
-echo Downloading PR-7 - Participant List (3 files)...
-echo ----------------------------------------
-curl -L -o "PR-7(Participant List)\index.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7(Participant%%20List)/index.html" && echo [SUCCESS] index.html
-curl -L -o "PR-7(Participant List)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7(Participant%%20List)/script.js" && echo [SUCCESS] script.js
-curl -L -o "PR-7(Participant List)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7(Participant%%20List)/style.css" && echo [SUCCESS] style.css
-
+call :pr1
+call :pr2
+call :pr3
+call :pr4
+call :pr5
+call :pr6
+call :pr7
 echo.
 echo ========================================
-echo All Files Downloaded Successfully!
-echo Total: 25 files downloaded
+echo ALL Assignments Downloaded!
 echo ========================================
-goto done
+pause
+goto menu
 
 :invalid
 echo.
-echo Invalid choice! Please select a valid option (0-9).
-timeout /t 2 >nul
-goto menu
-
-:done
-echo.
+echo Invalid choice! Please select 0-9.
 pause
 goto menu
 
 :exit
 echo.
-echo ========================================
 echo Thank you for using LP-2 File Downloader!
-echo ========================================
 timeout /t 2 >nul
 exit
