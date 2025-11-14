@@ -1,5 +1,6 @@
 @echo off
 title LP-2 File Downloader
+color 07
 
 echo.
 echo LP-2 repository - detected files (will be downloaded by this script):
