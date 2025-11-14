@@ -1,0 +1,52 @@
+/* Page background and font */
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #e8e8e8;
+  padding: 20px;
+}
+
+/* Search input box */
+#searchBox {
+  width: 300px;
+  display: block;
+  margin: 10px auto 20px auto;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* "No events found" message */
+#noResult {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Event card container */
+.event {
+  width: 80%;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Event title */
+.event h3 {
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Event text */
+.event p {
+  margin: 5px 0;
+  color: #555;
+  line-height: 1.5;
+}

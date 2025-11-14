@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Journey Package - Participants</title>
+    <link rel="stylesheet" href="participants.css" />
+  </head>
+  <body>
+    <h2>Select a Journey Package to View Participants</h2>
+
+    <select id="eventSelect" onchange="showParticipants()">
+      <option value="">-- Choose Journey Package --</option>
+      <option value="rajasthan">Rajasthan Heritage Tour</option>
+      <option value="kerala">Kerala Backwaters Experience</option>
+      <option value="himachal">Himachal Mountain Adventure</option>
+    </select>
+
+    <table id="participantTable" style="display: none">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <script src="participants.js"></script>
+  </body>
+</html>
