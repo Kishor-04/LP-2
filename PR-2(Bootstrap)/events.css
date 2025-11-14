@@ -50,7 +50,7 @@ nav a:hover {
 }
 
 /* Tablet Styles (768px and below) */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   header {
     font-size: 24px;
     padding: 15px;
@@ -73,7 +73,7 @@ nav a:hover {
 }
 
 /* Mobile Styles (480px and below) */
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   header {
     font-size: 20px;
     padding: 12px;

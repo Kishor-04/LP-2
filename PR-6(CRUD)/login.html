@@ -5,30 +5,34 @@
     <link rel="stylesheet" href="admin.css" />
   </head>
   <body>
-    <div class="login-box">
+    <form class="login-box" id="loginForm">
       <h2>Admin Login</h2>
 
       <input type="text" id="user" placeholder="Enter Username" />
       <input type="password" id="pass" placeholder="Enter Password" />
 
-      <button onclick="login()">Login</button>
+      <button type="submit">Login</button>
 
       <p id="msg"></p>
-    </div>
+    </form>
 
     <script>
-      function login() {
+      function login(e) {
+        e.preventDefault();
         let user = document.getElementById("user").value;
         let pass = document.getElementById("pass").value;
 
         if (user === "admin" && pass === "admin123") {
-          window.location.href = "dashboard.html"; // redirect
+          window.location.href = "dashboard.html";
         } else {
           document.getElementById("msg").innerHTML =
             "Invalid username or password";
           document.getElementById("msg").style.color = "red";
         }
       }
+
+      document.getElementById("loginForm").addEventListener("submit", login);
+
     </script>
   </body>
 </html>
