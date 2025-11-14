@@ -4,6 +4,15 @@ title LP-2 File Downloader
 color 07
 REM Ensure script is run from the correct location
 cd /d "%~dp0"
+REM Check if curl is available
+where curl >nul 2>&1
+if errorlevel 1 (
+    echo.
+    echo ERROR: curl is not installed or not in PATH
+    echo Please install curl from https://curl.se/download.html
+    pause
+    exit /b 1
+)
 
 echo.
 echo LP-2 repository - detected files (will be downloaded by this script):
@@ -69,16 +78,16 @@ goto invalid
 echo.
 echo Downloading PR-1 (Static pages)...
 if not exist "PR-1(Static pages)" mkdir "PR-1(Static pages)"
-curl -L -o "PR-1(Static pages)\about.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/about.css" && echo [SUCCESS] about.css || echo [FAILED] about.css
-curl -L -o "PR-1(Static pages)\about.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/about.html" && echo [SUCCESS] about.html || echo [FAILED] about.html
-curl -L -o "PR-1(Static pages)\contact.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/contact.css" && echo [SUCCESS] contact.css || echo [FAILED] contact.css
-curl -L -o "PR-1(Static pages)\contact.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/contact.html" && echo [SUCCESS] contact.html || echo [FAILED] contact.html
-curl -L -o "PR-1(Static pages)\events.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/events.css" && echo [SUCCESS] events.css || echo [FAILED] events.css
-curl -L -o "PR-1(Static pages)\events.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/events.html" && echo [SUCCESS] events.html || echo [FAILED] events.html
-curl -L -o "PR-1(Static pages)\home.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/home.css" && echo [SUCCESS] home.css || echo [FAILED] home.css
-curl -L -o "PR-1(Static pages)\home.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/home.html" && echo [SUCCESS] home.html || echo [FAILED] home.html
+curl -s -L -o "PR-1(Static pages)\about.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/about.css" && echo [OK] about.css || echo [FAIL] about.css
+curl -s -L -o "PR-1(Static pages)\about.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/about.html" && echo [OK] about.html || echo [FAIL] about.html
+curl -s -L -o "PR-1(Static pages)\contact.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/contact.css" && echo [OK] contact.css || echo [FAIL] contact.css
+curl -s -L -o "PR-1(Static pages)\contact.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/contact.html" && echo [OK] contact.html || echo [FAIL] contact.html
+curl -s -L -o "PR-1(Static pages)\events.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/events.css" && echo [OK] events.css || echo [FAIL] events.css
+curl -s -L -o "PR-1(Static pages)\events.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/events.html" && echo [OK] events.html || echo [FAIL] events.html
+curl -s -L -o "PR-1(Static pages)\home.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/home.css" && echo [OK] home.css || echo [FAIL] home.css
+curl -s -L -o "PR-1(Static pages)\home.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/home.html" && echo [OK] home.html || echo [FAIL] home.html
 echo.
-echo PR-1 downloaded.
+echo PR-1 download completed.
 pause
 goto menu
 
@@ -95,11 +104,11 @@ goto menu
 echo.
 echo Downloading PR-3 (Validation)...
 if not exist "PR-3(Validation)" mkdir "PR-3(Validation)"
-curl -L -o "PR-3(Validation)\event.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/event.html" && echo [SUCCESS] event.html || echo [FAILED] event.html
-curl -L -o "PR-3(Validation)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/script.js" && echo [SUCCESS] script.js || echo [FAILED] script.js
-curl -L -o "PR-3(Validation)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/style.css" && echo [SUCCESS] style.css || echo [FAILED] style.css
+curl -s -L -o "PR-3(Validation)\event.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/event.html" && echo [OK] event.html || echo [FAIL] event.html
+curl -s -L -o "PR-3(Validation)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/script.js" && echo [OK] script.js || echo [FAIL] script.js
+curl -s -L -o "PR-3(Validation)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/style.css" && echo [OK] style.css || echo [FAIL] style.css
 echo.
-echo PR-3 downloaded.
+echo PR-3 download completed.
 pause
 goto menu
 
@@ -125,12 +134,12 @@ goto menu
 echo.
 echo Downloading PR-6 (CRUD)...
 if not exist "PR-6(CRUD)" mkdir "PR-6(CRUD)"
-curl -L -o "PR-6(CRUD)\admin.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/admin.css" && echo [SUCCESS] admin.css || echo [FAILED] admin.css
-curl -L -o "PR-6(CRUD)\admin.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/admin.js" && echo [SUCCESS] admin.js || echo [FAILED] admin.js
-curl -L -o "PR-6(CRUD)\dashboard.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/dashboard.html" && echo [SUCCESS] dashboard.html || echo [FAILED] dashboard.html
-curl -L -o "PR-6(CRUD)\login.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/login.html" && echo [SUCCESS] login.html || echo [FAILED] login.html
+curl -s -L -o "PR-6(CRUD)\admin.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/admin.css" && echo [OK] admin.css || echo [FAIL] admin.css
+curl -s -L -o "PR-6(CRUD)\admin.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/admin.js" && echo [OK] admin.js || echo [FAIL] admin.js
+curl -s -L -o "PR-6(CRUD)\dashboard.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/dashboard.html" && echo [OK] dashboard.html || echo [FAIL] dashboard.html
+curl -s -L -o "PR-6(CRUD)\login.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/login.html" && echo [OK] login.html || echo [FAIL] login.html
 echo.
-echo PR-6 downloaded.
+echo PR-6 download completed.
 pause
 goto menu
 
@@ -155,25 +164,25 @@ if not exist "PR-5(Database)" mkdir "PR-5(Database)"
 if not exist "PR-7(Participant List)" mkdir "PR-7(Participant List)"
 
 echo --- PR-1 files ---
-curl -L -o "PR-1(Static pages)\about.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/about.css" && echo [OK] about.css || echo [SKIP] about.css
-curl -L -o "PR-1(Static pages)\about.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/about.html" && echo [OK] about.html || echo [SKIP] about.html
-curl -L -o "PR-1(Static pages)\contact.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/contact.css" && echo [OK] contact.css || echo [SKIP] contact.css
-curl -L -o "PR-1(Static pages)\contact.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/contact.html" && echo [OK] contact.html || echo [SKIP] contact.html
-curl -L -o "PR-1(Static pages)\events.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/events.css" && echo [OK] events.css || echo [SKIP] events.css
-curl -L -o "PR-1(Static pages)\events.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/events.html" && echo [OK] events.html || echo [SKIP] events.html
-curl -L -o "PR-1(Static pages)\home.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/home.css" && echo [OK] home.css || echo [SKIP] home.css
-curl -L -o "PR-1(Static pages)\home.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/home.html" && echo [OK] home.html || echo [SKIP] home.html
+curl -s -L -o "PR-1(Static pages)\about.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/about.css" && echo [OK] about.css || echo [SKIP] about.css
+curl -s -L -o "PR-1(Static pages)\about.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/about.html" && echo [OK] about.html || echo [SKIP] about.html
+curl -s -L -o "PR-1(Static pages)\contact.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/contact.css" && echo [OK] contact.css || echo [SKIP] contact.css
+curl -s -L -o "PR-1(Static pages)\contact.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/contact.html" && echo [OK] contact.html || echo [SKIP] contact.html
+curl -s -L -o "PR-1(Static pages)\events.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/events.css" && echo [OK] events.css || echo [SKIP] events.css
+curl -s -L -o "PR-1(Static pages)\events.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/events.html" && echo [OK] events.html || echo [SKIP] events.html
+curl -s -L -o "PR-1(Static pages)\home.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/home.css" && echo [OK] home.css || echo [SKIP] home.css
+curl -s -L -o "PR-1(Static pages)\home.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/home.html" && echo [OK] home.html || echo [SKIP] home.html
 
 echo --- PR-3 files ---
-curl -L -o "PR-3(Validation)\event.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/event.html" && echo [OK] event.html || echo [SKIP] event.html
-curl -L -o "PR-3(Validation)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/script.js" && echo [OK] script.js || echo [SKIP] script.js
-curl -L -o "PR-3(Validation)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/style.css" && echo [OK] style.css || echo [SKIP] style.css
+curl -s -L -o "PR-3(Validation)\event.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/event.html" && echo [OK] event.html || echo [SKIP] event.html
+curl -s -L -o "PR-3(Validation)\script.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/script.js" && echo [OK] script.js || echo [SKIP] script.js
+curl -s -L -o "PR-3(Validation)\style.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/style.css" && echo [OK] style.css || echo [SKIP] style.css
 
 echo --- PR-6 files ---
-curl -L -o "PR-6(CRUD)\admin.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/admin.css" && echo [OK] admin.css || echo [SKIP] admin.css
-curl -L -o "PR-6(CRUD)\admin.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/admin.js" && echo [OK] admin.js || echo [SKIP] admin.js
-curl -L -o "PR-6(CRUD)\dashboard.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/dashboard.html" && echo [OK] dashboard.html || echo [SKIP] dashboard.html
-curl -L -o "PR-6(CRUD)\login.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/login.html" && echo [OK] login.html || echo [SKIP] login.html
+curl -s -L -o "PR-6(CRUD)\admin.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/admin.css" && echo [OK] admin.css || echo [SKIP] admin.css
+curl -s -L -o "PR-6(CRUD)\admin.js" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/admin.js" && echo [OK] admin.js || echo [SKIP] admin.js
+curl -s -L -o "PR-6(CRUD)\dashboard.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/dashboard.html" && echo [OK] dashboard.html || echo [SKIP] dashboard.html
+curl -s -L -o "PR-6(CRUD)\login.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/login.html" && echo [OK] login.html || echo [SKIP] login.html
 
 echo.
 echo All discovered files processed. For PR folders without discovered files, open the script and add raw URLs under the appropriate section.
