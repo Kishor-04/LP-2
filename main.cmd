@@ -62,16 +62,16 @@ goto menu
 :: PR-1
 :: -----------------------------
 :pr1
-echo Downloading PR-1 (Static pages)...
-set folder=PR-1(Static pages)
-call :download "%folder%" "about.css"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/about.css"
-call :download "%folder%" "about.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/about.html"
-call :download "%folder%" "contact.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/contact.css"
-call :download "%folder%" "contact.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/contact.html"
-call :download "%folder%" "events.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/events.css"
-call :download "%folder%" "events.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/events.html"
-call :download "%folder%" "home.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/home.css"
-call :download "%folder%" "home.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1(Static%%20pages)/home.html"
+echo Downloading PR-1_Static_pages...
+set folder=PR-1_Static_pages
+call :download "%folder%" "about.css"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1_Static_pages/about.css"
+call :download "%folder%" "about.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1_Static_pages/about.html"
+call :download "%folder%" "contact.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1_Static_pages/contact.css"
+call :download "%folder%" "contact.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1_Static_pages/contact.html"
+call :download "%folder%" "events.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1_Static_pages/events.css"
+call :download "%folder%" "events.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1_Static_pages/events.html"
+call :download "%folder%" "home.css" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1_Static_pages/home.css"
+call :download "%folder%" "home.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-1_Static_pages/home.html"
 pause
 goto menu
 
@@ -79,10 +79,10 @@ goto menu
 :: PR-2
 :: -----------------------------
 :pr2
-echo Downloading PR-2 (Bootstrap)...
-set folder=PR-2(Bootstrap)
-call :download "%folder%" "events.css"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-2(Bootstrap)/events.css"
-call :download "%folder%" "events.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-2(Bootstrap)/events.html"
+echo Downloading PR-2_Bootstrap...
+set folder=PR-2_Bootstrap
+call :download "%folder%" "events.css"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-2_Bootstrap/events.css"
+call :download "%folder%" "events.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-2_Bootstrap/events.html"
 pause
 goto menu
 
@@ -90,11 +90,11 @@ goto menu
 :: PR-3
 :: -----------------------------
 :pr3
-echo Downloading PR-3 (Validation)...
-set folder=PR-3(Validation)
-call :download "%folder%" "event.html"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/event.html"
-call :download "%folder%" "script.js"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/script.js"
-call :download "%folder%" "style.css"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3(Validation)/style.css"
+echo Downloading PR-3_Validation...
+set folder=PR-3_Validation
+call :download "%folder%" "event.html"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3_Validation/event.html"
+call :download "%folder%" "script.js"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3_Validation/script.js"
+call :download "%folder%" "style.css"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-3_Validation/style.css"
 pause
 goto menu
 
@@ -102,11 +102,11 @@ goto menu
 :: PR-4
 :: -----------------------------
 :pr4
-echo Downloading PR-4 (Filter)...
-set folder=PR-4(Filter)
-call :download "%folder%" "event.html"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4(Filter)/event.html"
-call :download "%folder%" "script.js"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4(Filter)/script.js"
-call :download "%folder%" "style.css"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4(Filter)/style.css"
+echo Downloading PR-4_Filter...
+set folder=PR-4_Filter
+call :download "%folder%" "event.html"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4_Filter/event.html"
+call :download "%folder%" "script.js"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4_Filter/script.js"
+call :download "%folder%" "style.css"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-4_Filter/style.css"
 pause
 goto menu
 
@@ -114,12 +114,12 @@ goto menu
 :: PR-5
 :: -----------------------------
 :pr5
-echo Downloading PR-5 (Database)...
-set folder=PR-5(Database)
-call :download "%folder%" "event.html"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5(Database)/event.html"
-call :download "%folder%" "script.js"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5(Database)/script.js"
-call :download "%folder%" "server.js"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5(Database)/server.js"
-call :download "%folder%" "style.css"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5(Database)/style.css"
+echo Downloading PR-5_Database...
+set folder=PR-5_Database
+call :download "%folder%" "event.html"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5_Database/event.html"
+call :download "%folder%" "script.js"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5_Database/script.js"
+call :download "%folder%" "server.js"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5_Database/server.js"
+call :download "%folder%" "style.css"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-5_Database/style.css"
 pause
 goto menu
 
@@ -127,12 +127,12 @@ goto menu
 :: PR-6
 :: -----------------------------
 :pr6
-echo Downloading PR-6 (CRUD)...
-set folder=PR-6(CRUD)
-call :download "%folder%" "admin.css"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/admin.css"
-call :download "%folder%" "admin.js"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/admin.js"
-call :download "%folder%" "dashboard.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/dashboard.html"
-call :download "%folder%" "login.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6(CRUD)/login.html"
+echo Downloading PR-6_CRUD...
+set folder=PR-6_CRUD
+call :download "%folder%" "admin.css"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6_CRUD/admin.css"
+call :download "%folder%" "admin.js"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6_CRUD/admin.js"
+call :download "%folder%" "dashboard.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6_CRUD/dashboard.html"
+call :download "%folder%" "login.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-6_CRUD/login.html"
 pause
 goto menu
 
@@ -140,12 +140,12 @@ goto menu
 :: PR-7
 :: -----------------------------
 :pr7
-echo Downloading PR-7 (Participant List)...
-set folder=PR-7(Participant List)
-call :download "%folder%" "participants.css"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7(Participant%%20List)/participants.css"
-call :download "%folder%" "participants.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7(Participant%%20List)/participants.html"
-call :download "%folder%" "participants.js"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7(Participant%%20List)/participants.js"
-call :download "%folder%" "participants.json" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7(Participant%%20List)/participants.json"
+echo Downloading PR-7_Participant_List...
+set folder=PR-7_Participant_List
+call :download "%folder%" "participants.css"  "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7_Participant_List/participants.css"
+call :download "%folder%" "participants.html" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7_Participant_List/participants.html"
+call :download "%folder%" "participants.js"   "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7_Participant_List/participants.js"
+call :download "%folder%" "participants.json" "https://raw.githubusercontent.com/Kishor-04/LP-2/main/PR-7_Participant_List/participants.json"
 pause
 goto menu
 
