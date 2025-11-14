@@ -28,3 +28,4 @@ function validateForm() {
   msg.style.color = "green";
   msg.innerHTML = "Registration Successful!";
 }
+

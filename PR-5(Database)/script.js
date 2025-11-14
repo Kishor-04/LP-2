@@ -24,8 +24,6 @@ function validateForm() {
   // Send data to Node.js Server
   fetch("http://localhost:5000/register", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email, mobile }),
   })
     .then((res) => res.json())
     .then((data) => {
